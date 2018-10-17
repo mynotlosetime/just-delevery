@@ -1,0 +1,51 @@
+{
+  "name": "just-delevery",
+  "version": "1.0.0",
+  "description": "just-delevery",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "start:watch": "nodemon",
+    "prestart:prod": "tsc",
+    "start:prod": "node dist/server.js",
+    "doc:generate": "typedoc --out ./doc ./src",
+    "test": "jest -i"
+  },
+  "dependencies": {
+    "@nestjs/common": "4.6.5",
+    "@nestjs/core": "4.6.5",
+    "@nestjs/microservices": "4.6.5",
+    "@nestjs/swagger": "1.1.4",
+    "@nestjs/testing": "4.6.1",
+    "@nestjs/websockets": "4.6.5",
+    "axios": "^0.18.0",
+    "connect-session-sequelize": "^5.2.0",
+    "cookie-parser": "^1.4.3",
+    "express-session": "^1.15.6",
+    "intel": "^1.2.0",
+    "mysql2": "^1.5.2",
+    "nconf": "^0.9.1",
+    "redis": "^2.7.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.6",
+    "sequelize": "^4.39.1",
+    "sequelize-typescript": "^0.5.0",
+    "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.0",
+    "@types/node": "^8.9.4",
+    "@types/sequelize": "^4.27.8",
+    "@types/supertest": "^2.0.4",
+    "jest": "22.4.2",
+    "nodemon": "^1.17.1",
+    "supertest": "^3.0.0",
+    "ts-jest": "^22.4.2",
+    "ts-node": "^3.3.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  }
+}

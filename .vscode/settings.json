@@ -1,0 +1,26 @@
+{
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 10000,
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "boundary",
+  "macros": {
+    "snippetWithDescription": [
+      {
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+          "snippet": "console.log($0)"
+        }
+      }
+    ]
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "prettier.printWidth": 70,
+  "workbench.colorTheme": "Darcula Theme from IntelliJ",
+  "editor.minimap.enabled": false,
+  "workbench.iconTheme": "vscode-great-icons"
+}
