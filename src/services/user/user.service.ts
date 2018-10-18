@@ -1,13 +1,13 @@
 import { Component, Inject, HttpStatus } from "@nestjs/common";
 import { Model } from "sequelize-typescript";
 import { Sequelize } from "sequelize-typescript/lib/models/Sequelize";
-import { DataConst } from "../models/database.constants";
+import { DataConst } from "../../models/database.constants";
 import { HttpException } from "@nestjs/core";
-import { ForbiddenException } from "../common/exceptions/forbidden.exceprion";
-import config from "../config";
-import { Profile } from "../models/entity/profile/profile.entity";
-import { User } from "../models/entity/user/user.entity";
-import { LoginDataDto } from "../models/dto/loginData.dto";
+import { ForbiddenException } from "../../common/exceptions/forbidden.exceprion";
+import config from "../../config";
+import { LoginDataDto } from "../../models/dto/loginData.dto";
+import { User } from "./models/user.model";
+import { Profile } from "../../models/entities/profile/profile.entity";
 
 /** UserService - сервис для управления пользователями */
 @Component()
@@ -16,7 +16,7 @@ export class UserService {
     @Inject("UsersRepository")
     private readonly usersRepository: typeof Model,
     @Inject("UsersLogger") private readonly usersLogger
-  ) {}
+  ) { }
 
   /** Создание пользователей для приложения. */
   static async createTestData(): Promise<any> {

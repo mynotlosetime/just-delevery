@@ -11,14 +11,14 @@ import { ForbiddenException } from "../common/exceptions/forbidden.exceprion";
 import { LoginDataDto } from "../models/dto/loginData.dto";
 import { ApiOperation } from "@nestjs/swagger";
 import { apiDoc } from "./endPoints.doc";
-import { UserService } from "../services/user.service";
+import { UserService } from "../services/user/user.service";
 
 @Controller("auth")
 export class AuthController {
   constructor(
     @Inject("UsersLogger") private readonly usersLogger,
     private readonly usersService: UserService
-  ) {}
+  ) { }
 
   @ApiOperation(apiDoc.LOGIN)
   @Post("login")

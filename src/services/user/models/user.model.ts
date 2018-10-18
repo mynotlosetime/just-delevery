@@ -5,10 +5,11 @@ import {
   BelongsTo,
   ForeignKey
 } from "sequelize-typescript";
-import { Profile } from "../profile/profile.entity";
+
 import * as crypto from "crypto";
 import NoJSON from "../../../common/nojson.decorator";
 import CustomModel from "../../../common/custom.model";
+import { Profile } from "../../../models/entities/profile/profile.entity";
 
 @Table({
   tableName: "users"

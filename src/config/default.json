@@ -8,6 +8,18 @@
       "maxAge": null
     }
   },
+  "db": {
+    "dialect": "mysql",
+    "host": "46.254.20.48",
+    "username": "smart-food",
+    "password": "bUKCrMW2Y92QtmMY",
+    "database": "smart-food",
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "idle": 10000
+    }
+  },
   "weather": {
     "basePath": "http://api.openweathermap.org/data/2.5/weather?",
     "apiKey": "b5d2fe1f08efbc1e20e2d905625fb8af"

@@ -6,9 +6,9 @@ import {
   PrimaryKey,
   ForeignKey
 } from "sequelize-typescript";
-import { User } from "../user/user.entity";
 import CustomModel from "../../../common/custom.model";
 import NoJSON from "../../../common/NoJSON.decorator";
+import { User } from "../../../services/user/models/user.model";
 
 @Table({
   tableName: "profiles"
