@@ -27,7 +27,7 @@ export class QueueService {
    */
   public requestHandleFunction: (req: Object) => Promise<any>;
 
-  private intervalId: number;
+  private intervalId: NodeJS.Timer;
   /**
    * Инициализация сервиса, запуск обработки очереди {@link requestsQueue}.
    * @param requestHandleFunction функция обработчик зарпосов.
